@@ -1,0 +1,7 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--n-bg-color);
+    color: var(--n-text-color);
+}
