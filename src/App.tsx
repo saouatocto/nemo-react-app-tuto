@@ -1,5 +1,5 @@
 import React from 'react';
-import {Avatar, Card, Container, Heading1, Text} from 'components/ui';
+import {Avatar, Card, Container, Heading1, Skeleton, Text} from 'components/ui';
 
 const App = ()  => {
   return (
@@ -9,6 +9,7 @@ const App = ()  => {
             <Card>
                 <Avatar />
                 <Text>Date de création</Text>
+                <Skeleton width={200} height={12} />
             </Card>
         </Container>
     </div>
