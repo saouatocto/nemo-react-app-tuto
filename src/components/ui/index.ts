@@ -6,3 +6,4 @@ export * from './Text';
 export * from './Avatar';
 export * from './Skelton';
 export * from './Button';
+export * from './Badge';
