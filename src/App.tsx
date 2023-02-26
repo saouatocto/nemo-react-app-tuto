@@ -1,11 +1,15 @@
 import React from 'react';
-import {Card, Container} from 'components/ui';
+import {Avatar, Card, Container, Heading1, Text} from 'components/ui';
 
 const App = ()  => {
   return (
     <div className="App">
         <Container>
-            <Card>Nemo campus 2023</Card>
+            <Heading1>Nemo 2023</Heading1>
+            <Card>
+                <Avatar />
+                <Text>Date de création</Text>
+            </Card>
         </Container>
     </div>
   );
