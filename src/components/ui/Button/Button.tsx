@@ -1,48 +1,30 @@
-import React from 'react';
-import './button.css';
+import React, {useRef} from 'react';
+import {useButton, AriaButtonProps} from "@react-aria/button";
+import clsx from "clsx";
+import styles from './button.module.css';
 
-interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
+interface ButtonProps extends AriaButtonProps  {
+  variant?: "primary",
+  style?: "fill" | "outline"
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({ variant="primary", style="fill", children , ...props}: ButtonProps) => {
+  const ref = useRef<HTMLButtonElement>(null);
+  const {buttonProps} = useButton(props, ref);
+
+  const classNames = [
+    variant === 'primary' && styles.primary,
+    style === 'fill' && styles.fill,
+    style === 'outline' && styles.outline
+  ]
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
+      ref={ref}
+      {...buttonProps}
+      className={clsx(styles.btn, classNames )}
     >
-      {label}
+      {children}
     </button>
   );
 };
