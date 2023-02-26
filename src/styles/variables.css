@@ -22,4 +22,7 @@
     --n-border-color-success: var(--n-success);
     --n-border-color-warning: var(--n-warning);
     --n-border-color-danger: var(--n-danger);
+
+    /* box shadow */
+    --n-box-shadow: 0px 4px 0px var(--n-brand);
 }
