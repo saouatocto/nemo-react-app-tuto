@@ -1,5 +1,5 @@
 import React from 'react';
-import {Avatar, Badge, Button, Card, Container, Heading1, Skeleton, Stack, Text} from 'components/ui';
+import {Avatar, Badge, Button, Card, Container, Heading1, Skeleton, Stack, Text, TextField} from 'components/ui';
 
 const App = ()  => {
   return (
@@ -7,20 +7,20 @@ const App = ()  => {
         <Container>
             <Heading1>Nemo 2023</Heading1>
             <Card>
-
                 <Stack direction={"column"} spacing={"4"}>
-                <Avatar />
-                <Text>Date de création</Text>
-                <Skeleton width={200} height={12} />
-                <Stack direction={"row"} spacing={"5"}>
-                    <Button onPress={() => console.log("## onPress")}>Activer</Button>
-                    <Button style="outline" onPress={() => console.log("## onPress")}>Activer</Button>
-                </Stack>
-                <Stack direction={"column"} spacing={"4"}>
-                    <Badge variant={"success"} label={"actif"} />
-                    <Badge variant={"warning"} label={"suspendu"} />
-                    <Badge variant={"danger"} label={"supprimé"} />
-                </Stack>
+                    <Avatar />
+                    <Text>Date de création</Text>
+                    <Skeleton width={200} height={12} />
+                    <Stack direction={"row"} spacing={"5"}>
+                        <Button onPress={() => console.log("## onPress")}>Activer</Button>
+                        <Button style="outline" onPress={() => console.log("## onPress")}>Activer</Button>
+                    </Stack>
+                    <Stack direction={"column"} spacing={"4"}>
+                        <Badge variant={"success"} label={"actif"} />
+                        <Badge variant={"warning"} label={"suspendu"} />
+                        <Badge variant={"danger"} label={"supprimé"} />
+                    </Stack>
+                    <TextField fullWidth label={"name"} onChange={value => console.log(value)}/>
                 </Stack>
             </Card>
         </Container>

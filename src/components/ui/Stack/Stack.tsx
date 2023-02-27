@@ -61,9 +61,10 @@ interface StackProps {
     justifyContent?: JustifyContent;
     alignItems?: AlignItems;
     spacing?: string | number;
-    wrap?:'wrap' | 'nowrap'
+    wrap?:'wrap' | 'nowrap';
+    className?: string;
 }
-export const Stack = ({direction="row", justifyContent="flex-start", alignItems="flex-start", spacing=0, wrap='wrap', children}: PropsWithChildren<StackProps>) => {
+export const Stack = ({direction="row", justifyContent="flex-start", alignItems="flex-start", spacing=0, wrap='wrap', className, children}: PropsWithChildren<StackProps>) => {
     const classNames = clsx(
         'flex',
         getFlexDirectionClass(direction),
@@ -71,6 +72,7 @@ export const Stack = ({direction="row", justifyContent="flex-start", alignItems=
         getFlexAlignItemsClass(alignItems),
         `gap-${spacing}`,
         wrap ? 'wrap' : 'nowrap',
+        className
     );
 
     return <Box className={classNames}>{children}</Box>
