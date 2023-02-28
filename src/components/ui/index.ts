@@ -10,3 +10,4 @@ export * from './Badge';
 export * from './Stack';
 export * from './TextField';
 export * from './Dialog';
+export * from './Dropdown';

@@ -11,8 +11,8 @@ import {
     Stack,
     Text,
     TextField,
-    DialogTrigger,
-    DialogContent
+    DialogContent,
+    Dropdown, DropdownTrigger, DropdownContent, DropdownItem
 } from 'components/ui';
 
 const OpenDialog = () => {
@@ -33,23 +33,21 @@ const App = ()  => {
                 <Heading1>Nemo 2023</Heading1>
                 <OpenDialog />
             </Stack>
-            <Card>
-                <Stack direction={"column"} spacing={"4"}>
-                    <Avatar />
-                    <Text>Date de création</Text>
-                    <Skeleton width={200} height={12} />
-                    <Stack direction={"row"} spacing={"5"}>
-                        <Button onPress={() => console.log("## onPress")}>Activer</Button>
-                        <Button style="outline" onPress={() => console.log("## onPress")}>Activer</Button>
+            <br />
+            <Stack direction={"column"} spacing={"4"} fullWidth>
+                <Card>
+                    <Stack direction={"row"} spacing={"4"}   alignItems={"center"} fullWidth>
+                        <Avatar />
+                        <Text>Date de création</Text>
                     </Stack>
-                    <Stack direction={"column"} spacing={"4"}>
-                        <Badge variant={"success"} label={"actif"} />
-                        <Badge variant={"warning"} label={"suspendu"} />
-                        <Badge variant={"danger"} label={"supprimé"} />
+                </Card>
+                <Card>
+                    <Stack direction={"row"} spacing={"4"}   alignItems={"center"} fullWidth>
+                        <Avatar />
+                        <Text>Date de création</Text>
                     </Stack>
-                    <TextField fullWidth label={"name"} onChange={value => console.log(value)}/>
-                </Stack>
-            </Card>
+                </Card>
+            </Stack>
         </Container>
     </div>
   );

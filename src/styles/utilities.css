@@ -84,7 +84,9 @@
     flex-wrap: nowrap;
 }
 
-
+.full_width {
+    width: 100%;
+}
 
 
 
