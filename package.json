@@ -5,6 +5,8 @@
   "dependencies": {
     "@fontsource/mulish": "^4.5.14",
     "@radix-ui/react-avatar": "^1.0.1",
+    "@radix-ui/react-dialog": "^1.0.2",
+    "@radix-ui/react-icons": "^1.2.0",
     "@react-aria/button": "^3.7.0",
     "@react-aria/textfield": "^3.9.0",
     "@testing-library/jest-dom": "^5.16.5",

@@ -1,11 +1,38 @@
-import React from 'react';
-import {Avatar, Badge, Button, Card, Container, Heading1, Skeleton, Stack, Text, TextField} from 'components/ui';
+import React, {useState} from 'react';
+import {
+    Avatar,
+    Badge,
+    Button,
+    Card,
+    Container,
+    Dialog,
+    Heading1,
+    Skeleton,
+    Stack,
+    Text,
+    TextField,
+    DialogTrigger,
+    DialogContent
+} from 'components/ui';
+
+const OpenDialog = () => {
+    const [dialogOpen, setDialogOpen] = useState(false);
+    return <>
+            <Button onPress={() => setDialogOpen(true)}>Open dialog</Button>
+            <Dialog defaultOpen={false} open={dialogOpen} onOpenChange={value => setDialogOpen(value)}>
+                <DialogContent>Dialog Content</DialogContent>
+            </Dialog>
+        </>
+}
 
 const App = ()  => {
   return (
     <div className="App">
         <Container>
-            <Heading1>Nemo 2023</Heading1>
+            <Stack direction={"row"} justifyContent={"space-between"}>
+                <Heading1>Nemo 2023</Heading1>
+                <OpenDialog />
+            </Stack>
             <Card>
                 <Stack direction={"column"} spacing={"4"}>
                     <Avatar />
