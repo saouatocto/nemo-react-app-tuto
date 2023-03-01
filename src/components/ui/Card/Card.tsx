@@ -1,10 +1,9 @@
-import {PropsWithChildren} from "react";
+import { PropsWithChildren } from 'react';
 import { Box } from '../Box';
 import style from './card.module.css';
 
-interface CardProps {
-}
+interface CardProps {}
 
-export const Card = ({children}: PropsWithChildren<CardProps>) => {
-    return <Box className={style.wrapper}>{children}</Box>
-}
+export const Card = ({ children }: PropsWithChildren<CardProps>) => {
+  return <Box className={style.wrapper}>{children}</Box>;
+};

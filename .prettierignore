@@ -1,0 +1,14 @@
+.github
+.vscode
+node_modules
+nginx
+.dockerignore
+.gitignore
+Dockerfile
+package.json
+package-lock.json
+README.md
+yarn.lock
+.eslintrc
+.prettierrc
+public/resources/config.js

@@ -1,59 +1,78 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
-    Avatar,
-    Badge,
-    Button,
-    Card,
-    Container,
-    Dialog,
-    Heading1,
-    Skeleton,
-    Stack,
-    Text,
-    TextField,
-    DialogContent,
-    Dropdown, DropdownTrigger, DropdownContent, DropdownItem
+  Avatar,
+  Badge,
+  Button,
+  Card,
+  Container,
+  Dialog,
+  Heading1,
+  Skeleton,
+  Stack,
+  Text,
+  TextField,
+  DialogContent,
+  Dropdown,
+  DropdownTrigger,
+  DropdownContent,
+  DropdownItem,
 } from 'components/ui';
-import {UserCreationForm} from "components/UserCreationForm";
+import { UserCreationForm } from 'components/UserCreationForm';
 
 const OpenDialog = () => {
-    const [dialogOpen, setDialogOpen] = useState(false);
-    return <>
-            <Button onPress={() => setDialogOpen(true)}>Open dialog</Button>
-            <Dialog defaultOpen={false} open={dialogOpen} onOpenChange={value => setDialogOpen(value)}>
-                <DialogContent>
-                    <UserCreationForm onSubmit={() => {}} onCancel={() => {}} />
-                </DialogContent>
-            </Dialog>
-        </>
-}
+  const [dialogOpen, setDialogOpen] = useState(false);
+  return (
+    <>
+      <Button onPress={() => setDialogOpen(true)}>Open dialog</Button>
+      <Dialog
+        defaultOpen={false}
+        open={dialogOpen}
+        onOpenChange={(value) => setDialogOpen(value)}
+      >
+        <DialogContent>
+          <UserCreationForm onSubmit={() => {}} onCancel={() => {}} />
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+};
 
-const App = ()  => {
+const App = () => {
   return (
     <div className="App">
-        <Container>
-            <Stack direction={"row"} justifyContent={"space-between"}>
-                <Heading1>Nemo 2023</Heading1>
-                <OpenDialog />
+      <Container>
+        <Stack direction={'row'} justifyContent={'space-between'}>
+          <Heading1>Nemo 2023</Heading1>
+          <OpenDialog />
+        </Stack>
+        <br />
+        <Stack direction={'column'} spacing={'4'} fullWidth>
+          <Card>
+            <Stack
+              direction={'row'}
+              spacing={'4'}
+              alignItems={'center'}
+              fullWidth
+            >
+              <Avatar />
+              <Text>Date de création</Text>
             </Stack>
-            <br />
-            <Stack direction={"column"} spacing={"4"} fullWidth>
-                <Card>
-                    <Stack direction={"row"} spacing={"4"}   alignItems={"center"} fullWidth>
-                        <Avatar />
-                        <Text>Date de création</Text>
-                    </Stack>
-                </Card>
-                <Card>
-                    <Stack direction={"row"} spacing={"4"}   alignItems={"center"} fullWidth>
-                        <Avatar />
-                        <Text>Date de création</Text>
-                    </Stack>
-                </Card>
+          </Card>
+          <Card>
+            <Stack
+              direction={'row'}
+              spacing={'4'}
+              alignItems={'center'}
+              fullWidth
+            >
+              <Avatar />
+              <Text>Date de création</Text>
             </Stack>
-        </Container>
+          </Card>
+        </Stack>
+      </Container>
     </div>
   );
-}
+};
 
 export default App;
