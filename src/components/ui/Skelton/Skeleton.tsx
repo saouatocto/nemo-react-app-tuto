@@ -1,4 +1,4 @@
-import {Box} from 'components/ui/Box';
+import { Box } from 'components/ui/Box';
 import clsx from 'clsx';
 import styles from './skeleton.module.css';
 

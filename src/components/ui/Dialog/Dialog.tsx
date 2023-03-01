@@ -1,6 +1,6 @@
 import React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import {Cross1Icon} from '@radix-ui/react-icons';
+import { Cross1Icon } from '@radix-ui/react-icons';
 import styles from './dialog.module.css';
 
 export const DialogContent = React.forwardRef<
@@ -13,8 +13,7 @@ export const DialogContent = React.forwardRef<
       <DialogPrimitive.Content
         className={styles.content_wrapper}
         {...props}
-        ref={forwardedRef}
-      >
+        ref={forwardedRef}>
         {children}
         <DialogPrimitive.Close asChild>
           <button className={styles.close_button} aria-label="close">

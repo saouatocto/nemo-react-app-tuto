@@ -10,8 +10,7 @@ export const DropdownContent = React.forwardRef<
     <DropdownPrimitive.Portal>
       <DropdownPrimitive.Content
         className={styles.content_wrapper}
-        ref={forwardedRef}
-      >
+        ref={forwardedRef}>
         {children}
       </DropdownPrimitive.Content>
     </DropdownPrimitive.Portal>
@@ -26,8 +25,7 @@ export const DropdownItem = React.forwardRef<
     <DropdownPrimitive.Item
       className={styles.item_wrapper}
       {...props}
-      ref={forwardedRef}
-    >
+      ref={forwardedRef}>
       {children}
     </DropdownPrimitive.Item>
   );

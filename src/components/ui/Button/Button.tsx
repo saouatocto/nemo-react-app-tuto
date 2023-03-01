@@ -1,5 +1,5 @@
-import React, {useRef} from 'react';
-import {AriaButtonProps, useButton} from '@react-aria/button';
+import React, { useRef } from 'react';
+import { AriaButtonProps, useButton } from '@react-aria/button';
 import clsx from 'clsx';
 import styles from './button.module.css';
 
@@ -27,8 +27,7 @@ export const Button = ({
       type="button"
       ref={ref}
       {...buttonProps}
-      className={clsx(styles.btn, classNames)}
-    >
+      className={clsx(styles.btn, classNames)}>
       {children}
     </button>
   );

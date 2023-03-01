@@ -1,5 +1,5 @@
-import {PropsWithChildren} from 'react';
-import {Box} from '../Box';
+import { PropsWithChildren } from 'react';
+import { Box } from '../Box';
 import clsx from 'clsx';
 
 export type JustifyContent =

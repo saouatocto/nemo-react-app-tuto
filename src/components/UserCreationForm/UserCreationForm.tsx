@@ -1,5 +1,5 @@
-import {Controller, SubmitHandler, useForm} from 'react-hook-form';
-import {Button, Heading2, Stack, TextField} from 'components/ui';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { Button, Heading2, Stack, TextField } from 'components/ui';
 
 interface UserFormData {
   firstName: string;
@@ -72,13 +72,11 @@ export const UserCreationForm = ({
             direction={'row'}
             justifyContent={'flex-end'}
             spacing={3}
-            fullWidth
-          >
+            fullWidth>
             <Button
               variant={'primary'}
               style={'outline'}
-              onPress={handleOnCancel}
-            >
+              onPress={handleOnCancel}>
               Annuler
             </Button>
             <Button type={'submit'} variant={'primary'} style={'fill'}>

@@ -1,4 +1,8 @@
-import {Fallback as RadixAvatarFallback, Image as RadixAvatarIamge, Root as RadixAvatar,} from '@radix-ui/react-avatar';
+import {
+  Fallback as RadixAvatarFallback,
+  Image as RadixAvatarIamge,
+  Root as RadixAvatar,
+} from '@radix-ui/react-avatar';
 import clsx from 'clsx';
 import styles from './avatar.module.css';
 
@@ -12,8 +16,7 @@ export const Avatar = () => {
       />
       <RadixAvatarFallback
         className={clsx(styles.avatar_fallback)}
-        delayMs={600}
-      >
+        delayMs={600}>
         CT
       </RadixAvatarFallback>
     </RadixAvatar>

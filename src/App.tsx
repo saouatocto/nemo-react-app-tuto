@@ -1,6 +1,16 @@
-import React, {useState} from 'react';
-import {Avatar, Button, Card, Container, Dialog, DialogContent, Heading1, Stack, Text,} from 'components/ui';
-import {UserCreationForm} from 'components/UserCreationForm';
+import React, { useState } from 'react';
+import {
+  Avatar,
+  Button,
+  Card,
+  Container,
+  Dialog,
+  DialogContent,
+  Heading1,
+  Stack,
+  Text,
+} from 'components/ui';
+import { UserCreationForm } from 'components/UserCreationForm';
 
 const OpenDialog = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -10,8 +20,7 @@ const OpenDialog = () => {
       <Dialog
         defaultOpen={false}
         open={dialogOpen}
-        onOpenChange={(value) => setDialogOpen(value)}
-      >
+        onOpenChange={(value) => setDialogOpen(value)}>
         <DialogContent>
           <UserCreationForm onSubmit={() => {}} onCancel={() => {}} />
         </DialogContent>
@@ -35,8 +44,7 @@ const App = () => {
               direction={'row'}
               spacing={'4'}
               alignItems={'center'}
-              fullWidth
-            >
+              fullWidth>
               <Avatar />
               <Text>Date de création</Text>
             </Stack>
@@ -46,8 +54,7 @@ const App = () => {
               direction={'row'}
               spacing={'4'}
               alignItems={'center'}
-              fullWidth
-            >
+              fullWidth>
               <Avatar />
               <Text>Date de création</Text>
             </Stack>

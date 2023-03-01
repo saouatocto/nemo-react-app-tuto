@@ -1,10 +1,10 @@
 import React from 'react';
-import {Stack} from '../Stack';
+import { Stack } from '../Stack';
 import clsx from 'clsx';
-import {AriaTextFieldProps, useTextField} from '@react-aria/textfield';
+import { AriaTextFieldProps, useTextField } from '@react-aria/textfield';
 import style from './textfield.module.css';
-import {Box} from 'components/ui/Box';
-import {useObjectRef} from '@react-aria/utils';
+import { Box } from 'components/ui/Box';
+import { useObjectRef } from '@react-aria/utils';
 
 interface TextFieldProps extends AriaTextFieldProps {
   label: string;
@@ -24,8 +24,7 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
         className={style.wrapper}
         direction={'column'}
         spacing={1}
-        fullWidth={fullWidth}
-      >
+        fullWidth={fullWidth}>
         <label className={clsx(style.label)} {...labelProps}>
           {label}
         </label>

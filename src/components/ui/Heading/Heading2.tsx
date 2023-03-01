@@ -1,4 +1,4 @@
-import {PropsWithChildren} from 'react';
+import { PropsWithChildren } from 'react';
 import styles from './heading.module.css';
 
 interface Heading2Props {}

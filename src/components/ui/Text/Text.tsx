@@ -1,5 +1,5 @@
-import {PropsWithChildren} from 'react';
-import {Box} from 'components/ui/Box';
+import { PropsWithChildren } from 'react';
+import { Box } from 'components/ui/Box';
 import styles from './text.module.css';
 import clsx from 'clsx';
 
