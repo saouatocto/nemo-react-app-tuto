@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
-import { Stack } from '../Stack';
+import React from 'react';
+import {Stack} from '../Stack';
 import clsx from 'clsx';
-import { useTextField, AriaTextFieldProps } from '@react-aria/textfield';
+import {AriaTextFieldProps, useTextField} from '@react-aria/textfield';
 import style from './textfield.module.css';
-import { Box } from 'components/ui/Box';
-import { useObjectRef } from '@react-aria/utils';
+import {Box} from 'components/ui/Box';
+import {useObjectRef} from '@react-aria/utils';
 
 interface TextFieldProps extends AriaTextFieldProps {
   label: string;

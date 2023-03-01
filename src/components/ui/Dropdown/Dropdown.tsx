@@ -1,7 +1,6 @@
 import * as DropdownPrimitive from '@radix-ui/react-dropdown-menu';
 import styles from './dropdown.module.css';
 import React from 'react';
-import { Card } from '../Card';
 
 export const DropdownContent = React.forwardRef<
   HTMLDivElement,

@@ -1,8 +1,4 @@
-import {
-  Root as RadixAvatar,
-  Image as RadixAvatarIamge,
-  Fallback as RadixAvatarFallback,
-} from '@radix-ui/react-avatar';
+import {Fallback as RadixAvatarFallback, Image as RadixAvatarIamge, Root as RadixAvatar,} from '@radix-ui/react-avatar';
 import clsx from 'clsx';
 import styles from './avatar.module.css';
 

@@ -1,23 +1,6 @@
-import React, { useState } from 'react';
-import {
-  Avatar,
-  Badge,
-  Button,
-  Card,
-  Container,
-  Dialog,
-  Heading1,
-  Skeleton,
-  Stack,
-  Text,
-  TextField,
-  DialogContent,
-  Dropdown,
-  DropdownTrigger,
-  DropdownContent,
-  DropdownItem,
-} from 'components/ui';
-import { UserCreationForm } from 'components/UserCreationForm';
+import React, {useState} from 'react';
+import {Avatar, Button, Card, Container, Dialog, DialogContent, Heading1, Stack, Text,} from 'components/ui';
+import {UserCreationForm} from 'components/UserCreationForm';
 
 const OpenDialog = () => {
   const [dialogOpen, setDialogOpen] = useState(false);

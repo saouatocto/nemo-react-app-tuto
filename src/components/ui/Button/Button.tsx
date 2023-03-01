@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { useButton, AriaButtonProps } from '@react-aria/button';
+import React, {useRef} from 'react';
+import {AriaButtonProps, useButton} from '@react-aria/button';
 import clsx from 'clsx';
 import styles from './button.module.css';
 

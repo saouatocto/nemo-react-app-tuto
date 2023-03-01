@@ -1,0 +1,47 @@
+{
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "src"
+        ]
+      }
+    }
+  },
+  "extends": [
+    "react-app",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "prettier"
+  ],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "react/button-has-type": 0,
+    "react/jsx-props-no-spreading": 0,
+    "no-underscore-dangle": "off",
+    "semi": 1,
+    "react-hooks/exhaustive-deps": 0,
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
-import { Controller, useForm, SubmitHandler } from 'react-hook-form';
-import { Button, Heading2, Stack, TextField } from 'components/ui';
+import {Controller, SubmitHandler, useForm} from 'react-hook-form';
+import {Button, Heading2, Stack, TextField} from 'components/ui';
 
 interface UserFormData {
   firstName: string;
@@ -29,6 +29,7 @@ export const UserCreationForm = ({
 
   const handleOnSubmit: SubmitHandler<UserFormData> = (data) => {
     console.log('## UserCreationForm / data =  ', data);
+    onSubmit();
   };
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import { Cross1Icon } from '@radix-ui/react-icons';
+import {Cross1Icon} from '@radix-ui/react-icons';
 import styles from './dialog.module.css';
 
 export const DialogContent = React.forwardRef<

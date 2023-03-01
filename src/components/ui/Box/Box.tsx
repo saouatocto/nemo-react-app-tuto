@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
-import { PolymorphicComponentPropsWithRef, PolymorphicRef } from 'utils/types';
+import React, {forwardRef} from 'react';
+import {PolymorphicComponentPropsWithRef, PolymorphicRef} from 'utils/types';
 
 type BoxProps<C extends React.ElementType> = PolymorphicComponentPropsWithRef<
   C,
