@@ -14,13 +14,16 @@ import {
     DialogContent,
     Dropdown, DropdownTrigger, DropdownContent, DropdownItem
 } from 'components/ui';
+import {UserCreationForm} from "components/UserCreationForm";
 
 const OpenDialog = () => {
     const [dialogOpen, setDialogOpen] = useState(false);
     return <>
             <Button onPress={() => setDialogOpen(true)}>Open dialog</Button>
             <Dialog defaultOpen={false} open={dialogOpen} onOpenChange={value => setDialogOpen(value)}>
-                <DialogContent>Dialog Content</DialogContent>
+                <DialogContent>
+                    <UserCreationForm onSubmit={() => {}} onCancel={() => {}} />
+                </DialogContent>
             </Dialog>
         </>
 }

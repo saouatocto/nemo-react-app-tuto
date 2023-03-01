@@ -5,7 +5,7 @@ import styles from './button.module.css';
 
 interface ButtonProps extends AriaButtonProps  {
   variant?: "primary",
-  style?: "fill" | "outline"
+  style?: "fill" | "outline",
 }
 
 export const Button = ({ variant="primary", style="fill", children , ...props}: ButtonProps) => {
