@@ -15,6 +15,7 @@ export interface UserCreationDto {
 export type UserStatusType = (typeof USER_STATUS)[keyof typeof USER_STATUS];
 
 export interface User {
+  id: string;
   firstName: string;
   lastName: string;
   email: string;
