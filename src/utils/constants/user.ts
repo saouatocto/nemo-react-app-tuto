@@ -1,6 +1,6 @@
 export const USER_STATUS = {
-  ACTIVE: 'ACTIVE',
-  SUSPENDED: 'SUSPENDED',
+  ACTIVE: 'ACTIF',
+  SUSPENDED: 'SUSPENDU',
 } as const;
 
 export const USER_ACTION = {
