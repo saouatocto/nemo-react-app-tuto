@@ -1,27 +1,20 @@
-import { User } from 'utils/types';
-import {
-  Avatar,
-  Badge,
-  Box,
-  Card,
-  Dropdown,
-  DropdownContent,
-  DropdownItem,
-  DropdownTrigger,
-  Stack,
-  Text,
-} from 'components/ui';
+import { User, UserActionType } from 'utils/types';
+import { Avatar, Badge, Card, Stack, Text } from 'components/ui';
 import React from 'react';
 import { getUserFullName } from 'utils/helpers';
 import styles from './user_row.module.css';
-
-import { DotsVerticalIcon } from '@radix-ui/react-icons';
+import { UserRowActions } from 'components/UserRowActions';
 
 interface UserRowProps {
   user: User;
+  onAction: (action: UserActionType) => void;
 }
 
-export const UserRow = ({ user }: UserRowProps) => {
+export const UserRow = ({ user, onAction }: UserRowProps) => {
+  // Event handler
+  const handleOnAction = (action: UserActionType) => {
+    onAction(action);
+  };
   return (
     <Card className={styles.wrapper}>
       <Stack direction={'row'} spacing={3} alignItems="center">
@@ -42,15 +35,7 @@ export const UserRow = ({ user }: UserRowProps) => {
       </Stack>
 
       <Stack direction={'column'} spacing={1}>
-        <Dropdown>
-          <DropdownTrigger asChild>
-            <DotsVerticalIcon />
-          </DropdownTrigger>
-          <DropdownContent>
-            <DropdownItem>item 1</DropdownItem>
-            <DropdownItem>item 2</DropdownItem>
-          </DropdownContent>
-        </Dropdown>
+        <UserRowActions onAction={handleOnAction} />
       </Stack>
     </Card>
   );

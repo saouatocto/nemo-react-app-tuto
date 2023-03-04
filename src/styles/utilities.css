@@ -86,3 +86,12 @@
 .full_width {
   width: 100%;
 }
+
+
+.text-primary {
+  color: var(--n-text-color);
+}
+
+.text-danger {
+  color: var(--n-text-color-danger);
+}

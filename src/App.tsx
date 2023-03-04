@@ -26,7 +26,12 @@ const App = () => {
           </Stack>
           <br />
           <Stack direction={'column'} spacing={'4'} fullWidth>
-            <UserRow user={USER} />
+            <UserRow
+              user={USER}
+              onAction={(action) => {
+                console.log('## action = ', action);
+              }}
+            />
           </Stack>
         </Container>
       </div>
