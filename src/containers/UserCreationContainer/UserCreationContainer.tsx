@@ -1,17 +1,6 @@
 import { UserCreationForm } from 'components/UserCreationForm';
-import { useMutation } from 'react-query';
-import axios from 'axios';
-import { UserCreationDto, UserFormData } from 'utils/types';
-
-const ENDPOINTS = {
-  createUser: () => '/users',
-};
-
-const useCreateUser = () => {
-  return useMutation((useCreationDto: UserCreationDto) => {
-    return axios.post(ENDPOINTS.createUser(), useCreationDto);
-  }, {});
-};
+import { UserFormData } from 'utils/types';
+import { useCreateUser } from 'services/user';
 
 interface UserCreationContainerProps {
   onSuccess?: () => void;

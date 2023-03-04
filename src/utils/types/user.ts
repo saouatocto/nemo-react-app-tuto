@@ -1,4 +1,4 @@
-import {USER_ACTION, USER_STATUS} from 'utils/constants';
+import { USER_ACTION, USER_STATUS } from 'utils/constants';
 
 export interface UserFormData {
   firstName: string;
@@ -14,7 +14,7 @@ export interface UserCreationDto {
 
 export type UserStatusType = (typeof USER_STATUS)[keyof typeof USER_STATUS];
 
-export interface User {
+export interface UserDto {
   id: string;
   firstName: string;
   lastName: string;
@@ -22,5 +22,7 @@ export interface User {
   createdAt: string;
   status: UserStatusType;
 }
+
+export interface User extends UserDto {}
 
 export type UserActionType = (typeof USER_ACTION)[keyof typeof USER_ACTION];

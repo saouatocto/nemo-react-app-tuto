@@ -14,7 +14,7 @@ export const Avatar = ({ fullName }: AvatarProps) => {
     <RadixAvatar className={clsx(styles.wrapper)}>
       <RadixAvatarIamge
         className={clsx(styles.avatar_image)}
-        src={`https://api.dicebear.com/5.x/initials/svg?scale=80&seed=${fullName}`}
+        src={`https://api.dicebear.com/5.x/initials/svg?scale=60&seed=${fullName}`}
         alt={fullName}
       />
       <RadixAvatarFallback
