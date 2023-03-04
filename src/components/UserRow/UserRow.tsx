@@ -4,6 +4,7 @@ import React from 'react';
 import { getUserFullName } from 'utils/helpers';
 import styles from './user_row.module.css';
 import { UserRowActions } from 'components/UserRowActions';
+import { formatDate } from '../../utils/helpers/date';
 
 interface UserRowProps {
   user: User;
@@ -27,7 +28,7 @@ export const UserRow = ({ user, onAction }: UserRowProps) => {
 
       <Stack direction={'column'} spacing={1}>
         <Text className={styles.label}>Date de création</Text>
-        <Text className={styles.value}>{user.createdAt}</Text>
+        <Text className={styles.value}>{formatDate(user.createdAt)}</Text>
       </Stack>
 
       <Stack direction={'column'} spacing={1} className={styles.status}>

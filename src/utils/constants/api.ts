@@ -1,4 +1,4 @@
 export const ENDPOINTS = {
-  createUser: () => '/users',
-  getUsers: () => '/users',
+  createUser: () => '/nemos',
+  getUsers: () => '/nemos',
 };

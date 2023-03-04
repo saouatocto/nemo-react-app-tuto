@@ -9,7 +9,7 @@ const mapUserCreationDtoToUserDto = (
 ): UserDto => {
   return {
     ...userCreationDto,
-    createdAt: '03/04/2023',
+    createdAt: '',
     id: uuidv4(),
     status: USER_STATUS.ACTIVE,
   };
@@ -33,14 +33,14 @@ export const useCreateUser = () => {
         );
         console.log('## useCreateUser - onMutate() ');
       },
-      onSuccess: () => {
+      onSuccess: (data) => {
         console.log('## useCreateUser - onSuccess() ');
       },
       onError: () => {
         console.log('## useCreateUser - onError() ');
       },
-      onSettled: (_data, _error, variables) => {
-        console.log('## useCreateUser - onSettled() ');
+      onSettled: () => {
+        queryClient.invalidateQueries([QUERY_KEYS.USERS]);
       },
     },
   );

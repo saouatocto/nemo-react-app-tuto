@@ -10,6 +10,6 @@ export const useGetUsers = () => {
     queryFn: () => api.get(ENDPOINTS.getUsers()),
     retry: 0,
     refetchOnWindowFocus: false,
-    initialData: USERS,
+    // initialData: USERS,
   });
 };
