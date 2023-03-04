@@ -3,12 +3,14 @@ import {
   DropdownContent,
   DropdownItem,
   DropdownTrigger,
+  IconButton,
   Text,
 } from 'components/ui';
 import { DotsVerticalIcon } from '@radix-ui/react-icons';
 import React from 'react';
 import { UserActionType } from 'utils/types';
 import { USER_ACTION } from 'utils/constants';
+import styles from './user_actions.module.css';
 
 interface UserRowActionsProps {
   onAction: (action: UserActionType) => void;
@@ -27,7 +29,9 @@ export const UserRowActions = ({ onAction }: UserRowActionsProps) => {
   return (
     <Dropdown>
       <DropdownTrigger asChild>
-        <DotsVerticalIcon />
+        <IconButton className={styles.trigger_btn}>
+          <DotsVerticalIcon />
+        </IconButton>
       </DropdownTrigger>
       <DropdownContent>
         <DropdownItem onClick={handleOnSuspend}>

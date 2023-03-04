@@ -2,6 +2,7 @@ import React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { Cross1Icon } from '@radix-ui/react-icons';
 import styles from './dialog.module.css';
+import { IconButton } from '../Button';
 
 export const DialogContent = React.forwardRef<
   HTMLDivElement,
@@ -16,9 +17,9 @@ export const DialogContent = React.forwardRef<
         ref={forwardedRef}>
         {children}
         <DialogPrimitive.Close asChild>
-          <button className={styles.close_button} aria-label="close">
+          <IconButton className={styles.close_button} aria-label="close">
             <Cross1Icon />
-          </button>
+          </IconButton>
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
     </DialogPrimitive.Portal>
