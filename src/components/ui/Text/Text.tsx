@@ -5,10 +5,15 @@ import clsx from 'clsx';
 
 interface TextProps {
   as?: 'p' | 'span';
+  className?: string;
 }
-export const Text = ({ as = 'p', children }: PropsWithChildren<TextProps>) => {
+export const Text = ({
+  as = 'p',
+  className,
+  children,
+}: PropsWithChildren<TextProps>) => {
   return (
-    <Box as={as} className={clsx(styles.text)}>
+    <Box as={as} className={clsx(styles.text, className)}>
       {children}
     </Box>
   );

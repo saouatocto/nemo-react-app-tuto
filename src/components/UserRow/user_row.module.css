@@ -1,0 +1,24 @@
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.username {
+    font-weight: 700;
+}
+
+.label {
+    color: var(--n-text-color-100);
+    font-weight: 300;
+}
+
+.value {
+    font-size: 14px;
+}
+
+.status {
+    margin-left: auto;
+}

@@ -13,6 +13,7 @@
 
   /* text colors */
   --n-text-color: var(--n-brand);
+  --n-text-color-100: #536187;
   --n-text-color-secondary: var(--n-secondary);
   --n-text-color-success: var(--n-success);
   --n-text-color-warning: var(--n-warning);
