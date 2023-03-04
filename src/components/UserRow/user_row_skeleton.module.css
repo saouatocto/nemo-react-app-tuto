@@ -1,7 +1,7 @@
 .wrapper {
-    --n-card-bg-color: var(--n-white);
-    background-color: var(--n-card-bg-color);
-    border-radius: 8px;
-    padding: 12px;
-    width: 100%;
+  --n-card-bg-color: var(--n-white);
+  background-color: var(--n-card-bg-color);
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
 }

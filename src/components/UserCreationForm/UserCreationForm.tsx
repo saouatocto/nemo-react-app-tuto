@@ -5,7 +5,6 @@ import get from 'lodash.get';
 import * as yup from 'yup';
 import { UserFormData } from 'utils/types';
 
-
 // TODO move to utils
 const userFormSchema = yup.object().shape({
   firstName: yup
