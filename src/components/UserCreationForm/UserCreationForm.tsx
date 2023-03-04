@@ -1,35 +1,52 @@
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { Button, Heading2, Stack, TextField } from 'components/ui';
+import { yupResolver } from '@hookform/resolvers/yup';
+import get from 'lodash.get';
+import * as yup from 'yup';
+import { UserFormData } from 'utils/types';
 
-interface UserFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-}
+const userFormSchema = yup.object().shape({
+  firstName: yup
+    .string()
+    .min(3, 'Le prénom doit avoir au minimum 3 caractère')
+    .required('Le Prénom est obligatoire'),
+  lastName: yup
+    .string()
+    .min(3, 'Le nom doit avoir au minimum 3 caractère')
+    .required('Le Nom est obligatoire'),
+  email: yup
+    .string()
+    .email('Email est invalid')
+    .required("l'adresse email est obligatoire"),
+});
 
 interface UserCreationFormProps {
-  onSubmit: () => void;
+  onSubmit: (user: UserFormData) => void;
   onCancel: () => void;
 }
 export const UserCreationForm = ({
   onSubmit,
   onCancel,
 }: UserCreationFormProps) => {
-  const { control, handleSubmit } = useForm<UserFormData>({
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<UserFormData>({
     defaultValues: {
       firstName: '',
       email: '',
       lastName: '',
     },
+    resolver: yupResolver(userFormSchema),
   });
 
   const handleOnCancel = () => {
     onCancel();
   };
 
-  const handleOnSubmit: SubmitHandler<UserFormData> = (data) => {
-    console.log('## UserCreationForm / data =  ', data);
-    onSubmit();
+  const handleOnSubmit: SubmitHandler<UserFormData> = (userData) => {
+    onSubmit(userData);
   };
 
   return (
@@ -42,7 +59,12 @@ export const UserCreationForm = ({
               name={'firstName'}
               control={control}
               render={({ field }) => (
-                <TextField fullWidth label={'Prénom'} {...field} />
+                <TextField
+                  fullWidth
+                  label={'Prénom'}
+                  {...field}
+                  errorMessage={get(errors, 'firstName.message')}
+                />
               )}
             />
 
@@ -50,7 +72,12 @@ export const UserCreationForm = ({
               name={'lastName'}
               control={control}
               render={({ field }) => (
-                <TextField fullWidth label={'Nom'} {...field} />
+                <TextField
+                  fullWidth
+                  label={'Nom'}
+                  {...field}
+                  errorMessage={get(errors, 'lastName.message')}
+                />
               )}
             />
 
@@ -62,6 +89,7 @@ export const UserCreationForm = ({
                   fullWidth
                   label={'Email'}
                   type={'email'}
+                  errorMessage={get(errors, 'email.message')}
                   {...field}
                 />
               )}
